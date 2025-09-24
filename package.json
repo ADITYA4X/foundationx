@@ -4,7 +4,10 @@
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "pnpm exec nx run-many --target=build --all"
+    "build": "pnpm exec nx run-many --target=build --all",
+    "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
+    "format:check": "pnpm format --check",
+    "format:write": "pnpm format --write"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +18,8 @@
     "@nx/next": "21.5.3",
     "eslint": "~8.57.0",
     "jest": "^30.0.2",
-    "nx": "21.5.3"
+    "nx": "21.5.3",
+    "prettier": "^3.4.2"
   },
   "dependencies": {
     "next": "~15.2.4",
