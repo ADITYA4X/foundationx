@@ -7,7 +7,10 @@
     "build": "pnpm exec nx run-many --target=build --all",
     "format": "prettier  \"{apps,libs}/**/*.{ts,tsx,js,json}\" --ignore-path .gitignore",
     "format:check": "pnpm format --check",
-    "format:write": "pnpm format --write"
+    "format:write": "pnpm format --write",
+    "lint:api": "npx nx lint api",
+    "lint:web": "npx nx lint web",
+    "lint": "pnpm run lint:api && pnpm run lint:web"
   },
   "keywords": [],
   "author": "",
@@ -20,10 +23,5 @@
     "jest": "^30.0.2",
     "nx": "21.5.3",
     "prettier": "^3.4.2"
-  },
-  "dependencies": {
-    "next": "~15.2.4",
-    "react": "19.0.0",
-    "react-dom": "19.0.0"
   }
 }

@@ -8,7 +8,13 @@
       "cache": true
     },
     "lint": {
-      "cache": true
+      "cache": true,
+      "options": {
+        "lintFilePatterns": [
+          "apps/web/**/*.{ts,tsx,js,jsx}",
+          "apps/api/**/*.{ts,js}"
+        ]
+      }
     },
     "tsc": {
       "cache": true
